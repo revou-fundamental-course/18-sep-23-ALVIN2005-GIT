@@ -112,29 +112,26 @@ function validateForm(event) {
     successParagraph.style.display = "none";
   } else {
     errorParagraph.style.display = "none";
-    successParagraph.textContent = "Terima Kasih Telah Mengisi Form Ini!";
+    successParagraph.textContent = "Terima Kasih, Data Anda Telah Terkirim.";
     event.preventDefault();
     successParagraph.style.display = "block";
+    emailInput.value = "";
+    phoneInput.value = "";
+    nameInput.value = "";
   }
 }
-// SOLVING OUT COMPLETE PROBLEM
-function handleAutofill(input) {
-  // Check if the input field is autofilled
-  if (input.value !== input.defaultValue) {
-    input.style.backgroundColor = "transparent";
-    input.style.color = "inherit";
+nameInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    validateForm(e); // Call the validateForm function when Enter is pressed
   }
-}
-
-function continuouslyUpdateStyles() {
-  // Function to continuously apply custom styling to input fields
-  const inputFields = document.querySelectorAll("input");
-
-  inputFields.forEach((input) => {
-    handleAutofill(input);
-  });
-
-  setTimeout(continuouslyUpdateStyles, 100); // Update styles every 100 milliseconds
-}
-
-continuouslyUpdateStyles(); // Start the continuous style update process
+});
+emailInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    validateForm(e); // Call the validateForm function when Enter is pressed
+  }
+});
+phoneInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    validateForm(e); // Call the validateForm function when Enter is pressed
+  }
+});

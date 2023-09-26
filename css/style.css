@@ -98,7 +98,6 @@ html {
 /* HERO SECTION */
 
 .hero {
-  margin-bottom: 5rem;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -226,8 +225,9 @@ html {
 }
 
 .contact p {
+  color: #fff;
   text-align: center;
-  max-width: 30rem;
+  font-size: 1.5rem;
   margin: auto;
   font-weight: 100;
   line-height: 1.6;
@@ -339,7 +339,7 @@ html {
 .contact .row form .success-message {
   color: green;
   font-weight: bold;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
 }
 .contact .row form .btn {
   border-radius: 0.5rem;
@@ -540,8 +540,9 @@ footer .credit a:active {
   }
 
   /* SIDEBAR JAVASCRIPT END */
+
   .about {
-    padding-top: 8rem;
+    padding-top: 12rem;
     padding-bottom: 35rem;
   }
   .about h2 {
@@ -573,7 +574,7 @@ footer .credit a:active {
     font-size: 1.2rem;
   }
   .contact {
-    padding-top: 8rem;
+    padding-top: 7rem;
   }
   .contact .row .map {
     max-height: 30rem;
