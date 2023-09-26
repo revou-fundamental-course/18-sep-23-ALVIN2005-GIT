@@ -481,7 +481,7 @@ footer .credit a:active {
 }
 
 /* MOBILE PHONE */
-@media (max-width: 450px) {
+@media (max-width: 520px) {
   html {
     font-size: 55%;
   }
