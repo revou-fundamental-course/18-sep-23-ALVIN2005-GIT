@@ -470,8 +470,8 @@ footer .credit a:active {
     transform: scaleX(0.2);
   }
 
-  .hero {
-    overflow-x: hidden;
+  .hero .content {
+    margin-top: -10rem;
   }
 
   .about {
