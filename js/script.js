@@ -10,15 +10,43 @@ window.addEventListener("scroll", function () {
   const scrollThreshold = 100;
 
   if (scrollY > scrollThreshold) {
-    navbar.style.borderColor = "#ffF";
+    navbar.style.borderBottom = "#ffF";
   } else {
-    navbar.style.borderColor = "#173884";
+    navbar.style.borderBottom = "#173884";
   }
 
   scrollTimeout = setTimeout(function () {
     navbar.style.borderColor = "#173884";
   }, 50);
 });
+
+// HERO SECTION IMAGE SLIDER
+const heroSliders = document.querySelectorAll(".hero-slider");
+let currentSlideIndex = 0;
+
+function showSlide(slideIndex) {
+  if (slideIndex < 0) {
+    currentSlideIndex = heroSliders.length - 1;
+  } else if (slideIndex >= heroSliders.length) {
+    currentSlideIndex = 0;
+  }
+
+  const offset = -currentSlideIndex * 100;
+
+  heroSliders.forEach((slider, index) => {
+    slider.style.transition = "transform 0.5s ease-in-out";
+    slider.style.transform = `translateX(${offset}%)`;
+  });
+}
+
+function nextSlide() {
+  currentSlideIndex++;
+  showSlide(currentSlideIndex);
+}
+
+setInterval(nextSlide, 3000);
+
+showSlide(currentSlideIndex);
 
 // TOGGLE KELAS ACTIVE
 const navbarNav = document.querySelector(".navbar-nav");
@@ -48,17 +76,17 @@ var phonePattern = /^0\d{9,11}$/;
 var namaPattern = /^[a-zA-Z]{3,}$/;
 
 // FUNCTION VALIDASI
+let emailInput = document.querySelector('input[placeholder="Masukkan E-Mail"]');
+let phoneInput = document.querySelector('input[placeholder="No.Telepon"]');
+let nameInput = document.querySelector('input[placeholder="Masukkan Nama"]');
+let inputgroup1 = document.querySelector(".input-group1");
+let inputgroup2 = document.querySelector(".input-group2");
+let inputgroup3 = document.querySelector(".input-group3");
+let errorParagraph = document.querySelector(".error-message");
+let successParagraph = document.querySelector(".success-message");
 
 function validateForm(event) {
   // DEKLARASI VARIABEL
-  let emailInput = document.querySelector('input[placeholder="Masukkan E-Mail"]');
-  let phoneInput = document.querySelector('input[placeholder="No.Telepon"]');
-  let nameInput = document.querySelector('input[placeholder="Masukkan Nama"]');
-  let inputgroup1 = document.querySelector(".input-group1");
-  let inputgroup2 = document.querySelector(".input-group2");
-  let inputgroup3 = document.querySelector(".input-group3");
-  let errorParagraph = document.querySelector(".error-message");
-  let successParagraph = document.querySelector(".success-message");
 
   //  RESET CLASS ERROR
 
@@ -120,6 +148,7 @@ function validateForm(event) {
     nameInput.value = "";
   }
 }
+
 nameInput.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     validateForm(e); // Call the validateForm function when Enter is pressed

@@ -12,7 +12,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  /* border: 1px solid rgb(255, 255, 255); */
 }
 
 body {
@@ -98,15 +97,46 @@ html {
 /* HERO SECTION */
 
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
+.hero .hero-slider:nth-child(1) {
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/header-bg.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.hero .hero-slider:nth-child(2) {
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/header2-bg.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+.hero .hero-slider:nth-child(3) {
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/header3-bg.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+.hero .hero-slider:nth-child(4) {
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/header4-bg.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.hero .hero-slider img {
+  width: 100%;
+  height: 100%;
+}
 .hero::after {
   content: "";
   display: block;
@@ -118,6 +148,9 @@ html {
 }
 
 .hero .content {
+  position: absolute;
+  z-index: 100;
+  align-items: center;
   padding: 1.4rem 7%;
   max-width: 60rem;
 }
@@ -233,7 +266,7 @@ html {
   line-height: 1.6;
 }
 
-/*Contact Section*/
+/* CONTACT SECTION */
 .contact .row {
   overflow: auto;
   border-radius: 0.5rem;
@@ -360,7 +393,7 @@ html {
   color: var(--secondary);
 }
 
-/*footer*/
+/* FOOTER */
 
 footer {
   background-color: var(--bg);
@@ -458,6 +491,14 @@ footer .credit a:active {
   .navbar .navbar-nav a:hover:after {
     transform: scaleX(0.2);
   }
+
+  .hero {
+    overflow-x: hidden;
+  }
+
+  .about {
+    padding-top: 10rem;
+  }
   .about h2 {
     margin-top: 3rem;
   }
@@ -469,7 +510,7 @@ footer .credit a:active {
   }
   .contact {
     padding-bottom: 13rem;
-    margin-top: 5rem;
+    padding-top: 10rem;
   }
   .contact .row {
     flex-wrap: wrap;
@@ -509,7 +550,7 @@ footer .credit a:active {
 
   /*SIDEBAR JAVASCRIPT START*/
   .navbar {
-    min-height: 6%;
+    min-height: 10%;
   }
 
   .navbar .navbar-logo {
@@ -541,8 +582,12 @@ footer .credit a:active {
 
   /* SIDEBAR JAVASCRIPT END */
 
+  .hero {
+    overflow-x: hidden;
+  }
+
   .about {
-    padding-top: 12rem;
+    padding-top: 10rem;
     padding-bottom: 35rem;
   }
   .about h2 {
@@ -560,12 +605,22 @@ footer .credit a:active {
     object-fit: cover;
     object-position: center;
   }
+  .about {
+    padding-bottom: 42rem;
+  }
   .about .row .content {
-    max-height: 2rem;
+    display: flex;
+
+    flex-wrap: wrap;
+    height: 1rem;
+  }
+  .about .row .content .row1 {
+    align-content: center;
   }
   .about .row .content h3 {
-    margin-top: 1rem;
-    font-size: 2rem;
+    max-width: 100%;
+    margin-top: 1.8rem;
+    font-size: 2.5rem;
   }
   .about .row .content p {
     font-size: 1.7rem;
@@ -574,7 +629,7 @@ footer .credit a:active {
     font-size: 1.2rem;
   }
   .contact {
-    padding-top: 7rem;
+    padding-top: 10rem;
   }
   .contact .row .map {
     max-height: 30rem;
