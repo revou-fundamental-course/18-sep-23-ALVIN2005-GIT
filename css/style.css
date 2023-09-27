@@ -110,6 +110,27 @@ html {
   min-height: 100vh;
   min-width: 100%;
 }
+.hero .hero-slider:nth-child(2) {
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/header2-bg.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+.hero .hero-slider:nth-child(3) {
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/header3-bg.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+.hero .hero-slider:nth-child(4) {
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/header4-bg.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
 
 .hero .hero-slider img {
   width: 100%;
