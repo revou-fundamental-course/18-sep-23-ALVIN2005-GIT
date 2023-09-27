@@ -12,7 +12,7 @@ window.addEventListener("scroll", function () {
   if (scrollY > scrollThreshold) {
     navbar.style.borderBottom = "#ffF";
   } else {
-    navbar.style.borderBottom = "#173884";
+    navbar.style.borderColor = "#173884";
   }
 
   scrollTimeout = setTimeout(function () {
