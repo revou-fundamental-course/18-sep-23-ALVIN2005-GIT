@@ -20,34 +20,6 @@ window.addEventListener("scroll", function () {
   }, 50);
 });
 
-// HERO SECTION IMAGE SLIDER
-const heroSliders = document.querySelectorAll(".hero-slider");
-let currentSlideIndex = 0;
-
-function showSlide(slideIndex) {
-  if (slideIndex < 0) {
-    currentSlideIndex = heroSliders.length - 1;
-  } else if (slideIndex >= heroSliders.length) {
-    currentSlideIndex = 0;
-  }
-
-  const offset = -currentSlideIndex * 100;
-
-  heroSliders.forEach((slider, index) => {
-    slider.style.transition = "transform 0.5s ease-in-out";
-    slider.style.transform = `translateX(${offset}%)`;
-  });
-}
-
-function nextSlide() {
-  currentSlideIndex++;
-  showSlide(currentSlideIndex);
-}
-
-setInterval(nextSlide, 3000);
-
-showSlide(currentSlideIndex);
-
 // TOGGLE KELAS ACTIVE
 const navbarNav = document.querySelector(".navbar-nav");
 
