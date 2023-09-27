@@ -171,7 +171,8 @@ html {
   margin-top: 1rem;
   line-height: 1.4;
   font-weight: 400;
-  text-shadow: 1px 1px 3px rgb(255, 255, 255 0.8);
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.8);
+  mix-blend-mode: difference;
 }
 
 .hero .content .cta {
@@ -495,6 +496,9 @@ footer .credit a:active {
   .hero {
     overflow-x: hidden;
   }
+  .hero .content {
+    margin-top: -10rem;
+  }
 
   .about {
     padding-top: 10rem;
@@ -581,11 +585,13 @@ footer .credit a:active {
   }
 
   /* SIDEBAR JAVASCRIPT END */
-
   .hero {
     overflow-x: hidden;
   }
 
+  .hero .content {
+    margin-top: -10rem;
+  }
   .about {
     padding-top: 10rem;
     padding-bottom: 35rem;
